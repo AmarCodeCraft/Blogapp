@@ -1,13 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+
+    <!-- SEO Meta Tags -->
+    <title>
+      ModernBlog - Professional Blogging Platform | Create, Share & Engage
+    </title>
+    <meta
+      name="description"
+      content="ModernBlog is a professional blogging platform where writers create compelling content, share stories, and build engaged communities. Start your blogging journey today with our modern, user-friendly interface."
+    />
+    <meta
+      name="keywords"
+      content="blog, blogging platform, writing, content creation, professional blog, modern blog, writing community, publish articles, blog posts, content management"
+    />
+    <meta name="author" content="AmarCodeCraft" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Viewport and Mobile Optimization -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="ModernBlog" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ModernBlog" />
+    <meta
+      property="og:title"
+      content="ModernBlog - Professional Blogging Platform"
+    />
+    <meta
+      property="og:description"
+      content="Discover amazing stories, share your thoughts, and connect with a community of passionate writers and readers from around the world."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="ModernBlog - Professional Blogging Platform"
+    />
+    <meta property="og:url" content="https://modernblog.com" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ModernBlog" />
+    <meta name="twitter:creator" content="@AmarCodeCraft" />
+    <meta
+      name="twitter:title"
+      content="ModernBlog - Professional Blogging Platform"
+    />
+    <meta
+      name="twitter:description"
+      content="Create compelling content, share stories, and build engaged communities with ModernBlog's professional blogging platform."
+    />
+    <meta name="twitter:image" content="/twitter-card.jpg" />
+    <meta name="twitter:image:alt" content="ModernBlog Platform Preview" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://modernblog.com" />
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Theme and Brand Colors -->
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- Preconnect to External Domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.modernblog.com" />
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ModernBlog",
+        "description": "Professional blogging platform for writers and content creators",
+        "url": "https://modernblog.com",
+        "logo": "https://modernblog.com/logo.png",
+        "sameAs": [
+          "https://twitter.com/ModernBlog",
+          "https://facebook.com/ModernBlog",
+          "https://linkedin.com/company/modernblog"
+        ],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://modernblog.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ModernBlog",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://modernblog.com/logo.png",
+            "width": 512,
+            "height": 512
+          }
+        }
+      }
+    </script>
+
+    <!-- Additional Structured Data - WebApplication -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ModernBlog",
+        "description": "A modern, professional blogging platform",
+        "url": "https://modernblog.com",
+        "applicationCategory": "BloggingApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "AmarCodeCraft"
+        }
+      }
+    </script>
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.modernblog.com;"
+    />
+
+    <!-- Performance Optimization -->
+    <link rel="preload" href="/src/main.jsx" as="script" />
+    <link rel="prefetch" href="/api/posts" />
+
+    <!-- Alternative Languages (if applicable) -->
+    <link rel="alternate" hreflang="en" href="https://modernblog.com" />
+    <link rel="alternate" hreflang="x-default" href="https://modernblog.com" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GA_TRACKING_ID");
+    </script>
   </body>
 </html>
