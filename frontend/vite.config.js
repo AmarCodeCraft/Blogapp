@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'blogapp.railway.internal.railway.app',
+        target: 'blogapp-production-a6dd.up.railway.app',
         changeOrigin: true,
         secure: false,
       },
