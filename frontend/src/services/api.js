@@ -1,8 +1,11 @@
 import axios from 'axios';
 
+const baseURL = import.meta.env.VITE_API_URL;
+
+
 // For posts API
 const postsApi = axios.create({
-  baseURL: '/posts',
+  baseURL: `${baseURL}/posts`,
 });
 
 export const getAllPosts = () => postsApi.get('/');
